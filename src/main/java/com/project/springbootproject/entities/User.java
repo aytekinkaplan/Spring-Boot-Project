@@ -10,9 +10,9 @@ import lombok.Data;
 @Data
 public class User {
     @Id
-    private Long id;
+    Long id;
 
-    private String userName;
+    String userName;
 
-    private String password;
+    String password;
 }
