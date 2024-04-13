@@ -16,3 +16,9 @@ public class User {
 
     String password;
 }
+
+// Explanation:
+// @Entity: Specifies that the class is an entity. This annotation is applied to the class level.
+// @Table(name = "user"): Specifies the table name for this entity in the database.
+// @Data: Lombok annotation that automatically generates getter, setter, equals, hashCode, and toString methods.
+// @Id: Specifies the primary key for the entity.
