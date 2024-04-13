@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/username/project-name/main/docs/logo.png" alt="Project Name" width="200" height="200">
-</p>
-
 <h1 align="center">Project Name</h1>
 
 <p align="center">
