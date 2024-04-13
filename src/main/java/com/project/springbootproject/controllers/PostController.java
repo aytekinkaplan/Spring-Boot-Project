@@ -1,8 +1,10 @@
 package com.project.springbootproject.controllers;
 
 import com.project.springbootproject.entities.Post;
+import com.project.springbootproject.requests.PostCreateRequests;
 import com.project.springbootproject.services.PostService;
 import org.springframework.web.bind.annotation.*;
+import com.project.springbootproject.requests.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -21,12 +23,22 @@ public class PostController {
     }
 
     @PostMapping
-    public Post createOnePost(@RequestBody Post newPost) {
-        return postService.saveOnePost(newPost);
+    public Post createOnePost(@RequestBody PostCreateRequests newPostRequest) {
+        return postService.createOnePost(newPostRequest);
     }
 
     @GetMapping("/{postId}")
     public Post getPost(@PathVariable Long postId) {
         return postService.getOnePostById(postId);
+    }
+
+    @PutMapping("/{postId}")
+    public Post updateOnePost(@PathVariable Long postId, @RequestBody PostUpdateRequest updatePost) {
+        return postService.updateOnePostById(postId, updatePost);
+    }
+
+    @DeleteMapping("/{postId}")
+    public void deleteOnePost(@PathVariable Long postId) {
+        postService.deleteOnePostById(postId);
     }
 }
